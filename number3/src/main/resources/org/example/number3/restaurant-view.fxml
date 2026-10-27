@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox alignment="TOP_CENTER" prefHeight="308.0" prefWidth="418.0" spacing="10.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.number3.RestaurantController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <!-- Вверх таблицы -->
+    <HBox alignment="CENTER_LEFT" spacing="15.0">
+        <Label prefWidth="30.0" />
+        <Label prefWidth="80.0" style="-fx-font-weight: bold;" text="Цена" />
+        <Label prefWidth="130.0" style="-fx-font-weight: bold;" text="Блюдо" />
+        <Label prefWidth="90.0" style="-fx-font-weight: bold;" text="Количество" />
+    </HBox>
+
+    <!-- Строка 1: Борщ -->
+    <HBox alignment="CENTER_LEFT" spacing="15.0">
+        <CheckBox fx:id="cbBorsch" prefWidth="30.0" />
+        <Label prefWidth="80.0" text="150 руб." />
+        <Label prefWidth="130.0" text="Борщ" />
+        <TextField fx:id="tfBorschQty" prefWidth="90.0" text="0" />
+    </HBox>
+
+    <!-- Строка 2: Паста Карбонара -->
+    <HBox alignment="CENTER_LEFT" spacing="15.0">
+        <CheckBox fx:id="cbCarbonara" prefWidth="30.0" />
+        <Label prefWidth="80.0" text="300 руб." />
+        <Label prefWidth="130.0" text="Паста Карбонара" />
+        <TextField fx:id="tfCarbonaraQty" prefWidth="90.0" text="0" />
+    </HBox>
+
+    <!-- Строка 3: Цезарь салат -->
+    <HBox alignment="CENTER_LEFT" spacing="15.0">
+        <CheckBox fx:id="cbCaesar" prefWidth="30.0" />
+        <Label prefWidth="80.0" text="200 руб." />
+        <Label prefWidth="130.0" text="Цезарь салат" />
+        <TextField fx:id="tfCaesarQty" prefWidth="90.0" text="0" />
+    </HBox>
+
+    <!-- Строка 4: Чай зеленый -->
+    <HBox alignment="CENTER_LEFT" spacing="15.0">
+        <CheckBox fx:id="cbTea" prefWidth="30.0" />
+        <Label prefWidth="80.0" text="50 руб." />
+        <Label prefWidth="130.0" text="Чай зеленый" />
+        <TextField fx:id="tfTeaQty" prefWidth="90.0" text="0" />
+    </HBox>
+
+    <VBox alignment="CENTER_LEFT" spacing="10.0">
+        <Button onAction="#ClickforCheck" style="-fx-font-weight: bold; -fx-padding: 8 15;" text="Сформировать чек" />
+        <TextArea fx:id="taReceipt" editable="false" prefHeight="130.0" prefWidth="380.0" promptText="Здесь появится ваш чек..." />
+    </VBox>
+
+</VBox>

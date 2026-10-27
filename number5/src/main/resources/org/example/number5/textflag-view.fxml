@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="468.0" prefWidth="499.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.number5.TextFlagController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label style="-fx-font-size: 15px; -fx-font-weight: bold;" text="Выберите цевета для полос флага" />
+
+    <VBox spacing="5.0">
+        <Label text="Первая полоса:" />
+            <HBox spacing="15.0">
+                  <fx:define>
+                      <ToggleGroup fx:id="stripe1Group"/>
+                  </fx:define>
+                <RadioButton text="Красный" toggleGroup="$stripe1Group" selected="true"/>
+                <RadioButton text="Синий" toggleGroup="$stripe1Group"/>
+                <RadioButton text="Белый" toggleGroup="$stripe1Group"/>
+                <RadioButton text="Зеленый" toggleGroup="$stripe1Group"/>
+            </HBox>
+    </VBox>
+
+    <VBox spacing="5.0">
+        <Label text="Вторая полоса:" />
+        <HBox spacing="15.0">
+            <fx:define>
+                <ToggleGroup fx:id="stripe2Group"/>
+            </fx:define>
+            <RadioButton text="Красный" toggleGroup="$stripe2Group"/>
+            <RadioButton text="Синий" toggleGroup="$stripe2Group" selected="true"/>
+            <RadioButton text="Белый" toggleGroup="$stripe2Group"/>
+            <RadioButton text="Зеленый" toggleGroup="$stripe2Group"/>
+        </HBox>
+    </VBox>
+
+    <VBox spacing="5.0">
+        <Label text="Третья полоса:" />
+        <HBox spacing="15.0">
+            <fx:define>
+                <ToggleGroup fx:id="stripe3Group"/>
+            </fx:define>
+            <RadioButton text="Красный" toggleGroup="$stripe3Group"/>
+            <RadioButton text="Синий" toggleGroup="$stripe3Group"/>
+            <RadioButton text="Белый" toggleGroup="$stripe3Group" selected="true"/>
+            <RadioButton text="Зеленый" toggleGroup="$stripe3Group"/>
+        </HBox>
+    </VBox>
+
+    <Button text="Нарисовать" onAction="#onDrawClick" style="-fx-font-weight: bold; -f-padding: 8 20"/>
+    <Label fx:id="FinishOutColour" text="Результат: здесь появится описание флага" style="-fx-font-size: 14px; -fx-text-fill: #333333;"/>
+</VBox>
